@@ -100,7 +100,7 @@ const initSpamDms = async () => {
 			await delay(config.spam_peoples_dms_delay);
 		};
 
-		if (config.stop_after_sent_to_everyone && ids.size === ids.length) {
+		if (config.stop_after_sent_to_everyone && sentTo.size === ids.length) {
 			console.log('done spamming dms.');
 			break;
 		};
