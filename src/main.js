@@ -22,29 +22,6 @@ const config = {
 	auto_reply_to_dms: false // automatically replys to people who dm you
 };
 
-const allowedSites = [
-	'https://www.chat-avenue.com/college',
-	'https://www.chat-avenue.com/singles',
-	'https://www.chat-avenue.com/dating',
-	'https://www.chat-avenue.com/general',
-	'https://www.chat-avenue.com/teen',
-	'https://www.chat-avenue.com/girls',
-	'https://www.chat-avenue.com/live',
-	'https://www.chat-avenue.com/sports',
-	'https://www.chat-avenue.com/music',
-	'https://www.chat-avenue.com/videogames',
-	'https://www.chat-avenue.com/mobile',
-	'https://www.chat-avenue.com/sex',
-
-	'https://www.teen-chat.org/chat',
-	'https://www.adultchat.net/chat'
-];
-
-if (!allowedSites.includes(window.location.origin)) {
-	alert('worse chat ave will NOT work here.');
-	throw new Error('site not allowed');
-};
-
 const sendPublicMessage = (message) => $.ajax({
 	url: 'system/action/chat_process.php',
 	type: 'post',
